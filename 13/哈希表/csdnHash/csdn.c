@@ -1,14 +1,26 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 char path[256] = "C:\\Users\\olydebug\\Downloads\\1.txt";
 #define N 4330
 
 struct info{
 	char *pstr;
-
 };
+
+struct info *pall = NULL;
+
+void init() {
+	pall = malloc(N * sizeof(struct info));
+	memset(pall, 0, N * sizeof(struct info));
+	FILE *pf = fopen(path, "r");
+	for (int i = 0; i < N; i++) {
+
+	}
+	fclose(pf);
+}
 
 // BKDR Hash Function
 unsigned int BKDRHash(char *str){
