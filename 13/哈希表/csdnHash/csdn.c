@@ -12,12 +12,34 @@ struct info{
 
 struct info *pall = NULL;
 
+//LaoZheng # 670203313747 # chengming_zheng@163.com
+
+void changestr(char *str) {
+	char *pbak = str;
+	//È¥³ý''×Ö·û
+	int i = 0;
+	int j = 0;
+	while ((str[i] = str[j++]) != '\0') {
+		if (*str != ' ') {
+			i++;
+		}
+	}
+	char *p1 = strstr(str, "#");
+	if (p1!= NULL) {
+		*p1 = '\0';
+	}
+
+}
+
 void init() {
 	pall = malloc(N * sizeof(struct info));
 	memset(pall, 0, N * sizeof(struct info));
 	FILE *pf = fopen(path, "r");
 	for (int i = 0; i < N; i++) {
-
+		char str[100] = { 0 };
+		fgets(str, 100, pf);							//¶ÁÈ¡
+		changestr(str);									//×Ö·û´®´¦Àí
+		unsigned int data = hashBKDRHash(str);
 	}
 	fclose(pf);
 }
