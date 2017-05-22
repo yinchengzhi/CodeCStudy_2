@@ -12,7 +12,8 @@ struct info{
 
 struct info *pall = NULL;
 
-//LaoZheng # 670203313747 # chengming_zheng@163.com
+//01234567	
+//LaoZheng\670203313747 # chengming_zheng@163.com
 
 void changestr(char *str) {
 	char *pbak = str;
@@ -40,6 +41,15 @@ void init() {
 		fgets(str, 100, pf);							//¶ÁÈ¡
 		changestr(str);									//×Ö·û´®´¦Àí
 		unsigned int data = hashBKDRHash(str);
+		int id = data%N;
+		if (pall[id].pstr == NULL) {
+			int length = strlen(str + strlen(str) + 1);
+			pall[id].pstr = calloc(length, sizeof(char));	//·ÖÅä
+			strcpy(pall[id].pstr, str + strlen(str) + 1);	//¿½±´
+		}
+		else {
+			printf("\n³åÍ»");
+		}
 	}
 	fclose(pf);
 }
