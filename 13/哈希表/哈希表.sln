@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "哈希表", "哈希表\哈希表.vcxproj", "{803BE809-5FD8-4B60-8C39-420CAD088F16}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csdnHash", "csdnHash\csdnHash.vcxproj", "{802EA3DE-4C03-4B34-B994-665122C5895D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csdnHash1", "csdnHash\csdnHash.vcxproj", "{802EA3DE-4C03-4B34-B994-665122C5895D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csdnHash2", "csdnHash2\csdnHash2.vcxproj", "{54B43597-A97B-456D-855F-4E2475A7DFFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{802EA3DE-4C03-4B34-B994-665122C5895D}.Release|x64.Build.0 = Release|x64
 		{802EA3DE-4C03-4B34-B994-665122C5895D}.Release|x86.ActiveCfg = Release|Win32
 		{802EA3DE-4C03-4B34-B994-665122C5895D}.Release|x86.Build.0 = Release|Win32
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Debug|x64.ActiveCfg = Debug|x64
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Debug|x64.Build.0 = Debug|x64
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Debug|x86.ActiveCfg = Debug|Win32
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Debug|x86.Build.0 = Debug|Win32
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Release|x64.ActiveCfg = Release|x64
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Release|x64.Build.0 = Release|x64
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Release|x86.ActiveCfg = Release|Win32
+		{54B43597-A97B-456D-855F-4E2475A7DFFC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

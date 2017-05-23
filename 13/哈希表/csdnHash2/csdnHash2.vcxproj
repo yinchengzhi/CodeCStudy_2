@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{802EA3DE-4C03-4B34-B994-665122C5895D}</ProjectGuid>
-    <RootNamespace>csdnHash</RootNamespace>
+    <ProjectGuid>{54B43597-A97B-456D-855F-4E2475A7DFFC}</ProjectGuid>
+    <RootNamespace>csdnHash2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
-    <ProjectName>csdnHash1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
