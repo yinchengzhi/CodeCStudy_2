@@ -1,6 +1,6 @@
 
 
-void run() {			//函数默认作用全局
+void run() {			//鍑芥暟榛樿浣滅敤鍏ㄥ眬
 
 	system("pause");
 }
