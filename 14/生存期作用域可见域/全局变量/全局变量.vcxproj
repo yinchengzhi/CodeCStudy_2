@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{6A671F26-70EA-4386-AECF-B9CA0ED274F6}</ProjectGuid>
-    <RootNamespace>生存期作用域可见域</RootNamespace>
+    <ProjectGuid>{587BF168-ACCA-4653-9F31-3E0F2367F951}</ProjectGuid>
+    <RootNamespace>全局变量</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -111,9 +111,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test.c" />
-    <ClCompile Include="作用域可见域.c" />
-    <ClCompile Include="生存期.c" />
+    <ClCompile Include="go.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
