@@ -19,6 +19,7 @@ void run() {
 
 }
 
+//判断一个字节中被置为1的位的个数
 unsigned int TestAsOne0(char log) {
 	int i;
 	unsigned int num = 0, val;
@@ -39,6 +40,15 @@ int Invert(char *str) {
 		str = str + 1;
 	}
 	return num;
+}
+
+void FourToSeven() {
+	unsigned a, b, c, d;
+	scanf("%o", &a);
+	b = a >> 4;
+	c = ~(~0 << 4);
+	d = b&c;
+	printf("%o\n%o\n", a, d);
 }
 
 void main() {
