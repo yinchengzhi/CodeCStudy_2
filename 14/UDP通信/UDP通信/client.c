@@ -8,7 +8,7 @@
 //网络通信
 #pragma comment(lib,"ws2_32.lib")
 
-void main2() {
+void main() {
 
 	SOCKET socket_client;								//客户端的套接字编号
 	SOCKADDR_IN server;									//保存服务器
