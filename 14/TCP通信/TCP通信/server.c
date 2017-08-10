@@ -37,12 +37,19 @@ void main() {
 	}
 
 	//设置连接地址
-	server_addr.sin_family = AF_INET;					//通信
+	server_addr.sin_family = AF_INET;								//通信
 	server_addr.sin_addr.S_un.S_addr = htons(INADDR_ANY);			//获取本地地址
-	//创建套接字，接受消息
-
+	server_addr.sin_port = htons(9982);								//端口
+	
+	//创建套接字，接受消息   SOCK_STREAM流
+	socket_server = socket(AF_INET, SOCK_STREAM, 0);				//创建
 	//绑定地址，端口
-
+	bind(socket_server, (SOCKADDR *)&server_addr, sizeof(SOCKADDR));
 	//监听
+	listen(socket_server, 5);										//最大等待数目为5
+
+	length = sizeof(SOCKADDR);
+	//接受连接
+	socket_receive = accept(socket_server, (SOCKADDR*)&client_addr, &length);
 
 }
