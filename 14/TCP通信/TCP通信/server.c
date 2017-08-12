@@ -52,4 +52,27 @@ void main() {
 	//接受连接
 	socket_receive = accept(socket_server, (SOCKADDR*)&client_addr, &length);
 
+	while (1) {
+		//接收数据
+		receivelength = recv(socket_receive, receivebuf, 256, 0);
+		printf("海华说: %s\n", receivebuf);
+
+		memset(receivebuf, 0, 256);									//清零
+		//返回发送数据
+
+		printf("芳姐，你想对海华说啥\n");
+		scanf("%s", sendbuf);										//初始化
+		sendlength = send(socket_receive, sendbuf, 256, 0);
+		memset(sendbuf, 0, 256);
+
+
+	}
+
+	//释放网络
+	closesocket(socket_receive);							//关闭网络
+	closesocket(socket_server);
+
+	WSACleanup();											//关闭
+
+	system("pause");
 }
