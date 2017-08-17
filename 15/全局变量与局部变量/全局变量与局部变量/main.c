@@ -46,6 +46,54 @@ void print() {
 	//printf("%d", a);					//a是局部变量无法访问
 }
 
-void main() {
+void main3() {
+	// printf("%d",a);					//C语言从上往下开始编译，前面没有检测到，就无法调用
 	int a = 10;							//局部变量，作用范围从定义开始到main函数结束
+	printf("%d", a);
+}
+
+void test1() {
+	int a = 10;
+	printf("%d,%p\n", a, &a);			//局部变量用完了就马上释放
+
+	printf("\n");
+}
+
+void test2() {
+	int a = 101;
+	printf("%d,%p\n", a, &a);
+
+	printf("\n");
+}
+
+//不同函数的同名变量，有些编译器为了优化，所以地址是一样的
+//他们的生命周期不一样，所以不会混淆，
+//地址先分配给test1的a，用完了释放，再次分配test2的a
+//所以重名不会有影响,因为生命周期是错开的
+
+void main4() {
+
+	test1();
+
+	printf("\n");
+
+	test2();
+
+	system("pause");
+}
+
+//生存周期有重合的变量，我们就要安排不同的地址加以区分
+
+void testlast() {
+	int num = 10;
+	printf("testlast = %d,%x", num, &num);
+}
+
+
+void main() {
+	int num = 11;
+	printf("main = %d,%x\n", num, &num);
+	testlast();
+
+	getchar();
 }
