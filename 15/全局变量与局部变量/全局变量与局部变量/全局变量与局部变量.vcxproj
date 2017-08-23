@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="全局变量说明.c" />
     <ClCompile Include="局部变量.c" />
     <ClCompile Include="局部变量案例.c" />
   </ItemGroup>

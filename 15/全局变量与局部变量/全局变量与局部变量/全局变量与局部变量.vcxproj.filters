@@ -21,5 +21,8 @@
     <ClCompile Include="局部变量案例.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="全局变量说明.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
