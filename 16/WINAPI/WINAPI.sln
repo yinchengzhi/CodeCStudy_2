@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WINAPI", "WINAPI\WINAPI.vcxproj", "{9572304B-511F-488F-BF88-434FFADC7054}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "直接修改内存", "直接修改内存\直接修改内存.vcxproj", "{E5B298F6-E8FF-4841-9819-6080FEBADCFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{9572304B-511F-488F-BF88-434FFADC7054}.Release|x64.Build.0 = Release|x64
 		{9572304B-511F-488F-BF88-434FFADC7054}.Release|x86.ActiveCfg = Release|Win32
 		{9572304B-511F-488F-BF88-434FFADC7054}.Release|x86.Build.0 = Release|Win32
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Debug|x64.ActiveCfg = Debug|x64
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Debug|x64.Build.0 = Debug|x64
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Debug|x86.ActiveCfg = Debug|Win32
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Debug|x86.Build.0 = Debug|Win32
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Release|x64.ActiveCfg = Release|x64
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Release|x64.Build.0 = Release|x64
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Release|x86.ActiveCfg = Release|Win32
+		{E5B298F6-E8FF-4841-9819-6080FEBADCFA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
