@@ -1,8 +1,9 @@
 #include<Windows.h>
+#include<stdio.h>
 
 _declspec(dllexport) int a = 10;
 
 _declspec(dllexport) void go() {
-
-	MessageBoxA(0, "go", "go", 10);
+	printf("Hello go");
+	MessageBoxA(0, "go", "go", 0);
 }
