@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 #include<WinSock2.h>
@@ -23,6 +25,29 @@ void main() {
 	}
 	client = socket(AF_INET, SOCK_STREAM, 0);	//创建
 	if (client == INVALID_SOCKET) {
-
+		puts("客户端创建失败");
+		system("pause");
 	}
+	serveraddr.sin_family = AF_INET;
+	serveraddr.sin_addr.S_un.S_addr = inet_addr(ip_addr);		//设置地址
+	serveraddr.sin_port = htons(port);							//端口
+
+	memset(serveraddr.sin_zero, 0x00, 8);
+	Ret = connect(client, (struct sockaddr*) &serveraddr, sizeof(serveraddr));
+	
+	if (Ret != 0) {
+		puts("客户端链接失败");
+		system("pause");
+	}
+	while (1) {
+		scanf("%s", senbuf);								//输入
+		Ret = send(client, senbuf, strlen(senbuf), 0);
+		if (Ret == SOCKET_ERROR) {
+			puts("客户端send 失败");
+			system("pause");
+		}
+	}
+	closesocket(client);
+	WSACleanup();
+
 }
