@@ -28,15 +28,22 @@ DWORD WINAPI clientthread(void *p) {
 //服务器
 
 void main() {
-	WSADATA WSA;							  //对比版本
-	SOCKET client, server;					  //客户端
-	struct sockaddr_in serveraddr;			  //服务器地址
+	WSADATA WSA;							      //对比版本
+	SOCKET client, server;					      //客户端
+	struct sockaddr_in localeaddr,clientaddr;     //服务器地址
 	int addr_length = 0;
-	HANDLE hthread = NULL;				      //线程句柄
-	int Ret = 0;							  //
+	HANDLE hthread = NULL;				          //线程句柄
+	int Ret = 0;							      //
 	char senbuf[256] = { 0 };
 
 	if (WSAStartup(MAKEWORD(2, 2), &WSA) != 0) {
+		puts("版本不一致，通信失败");
+		system("pause");
+		return;
+	}
+
+	server = socket(AF_INET, SOCK_STREAM, 0);		//通信
+	if (server==INVALID_SOCKET) {
 		puts("版本不一致，通信失败");
 		system("pause");
 		return;
