@@ -6,7 +6,7 @@
 #pragma comment(lib, "ws2_32.lib")
 
 #define port 5529
-#define ip_addr "127.0.0.1"
+#define ip_addr "192.168.191.1"
 
 void main() {
 
@@ -46,6 +46,11 @@ void main() {
 			puts("¿Í»§¶Ësend Ê§°Ü");
 			system("pause");
 		}
+		char receivebuf[256];
+		memset(receivebuf, 0, 256);
+		Ret = recv(client, receivebuf, 256, 0);
+		printf("%s", receivebuf);
+		
 	}
 	closesocket(client);
 	WSACleanup();
