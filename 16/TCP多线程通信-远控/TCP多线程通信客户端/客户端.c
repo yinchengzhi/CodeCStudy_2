@@ -40,12 +40,7 @@ void main() {
 		system("pause");
 	}
 	while (1) {
-		//scanf("%s", senbuf);								// ‰»Î
-		//Ret = send(client, senbuf, strlen(senbuf), 0);
-		//if (Ret == SOCKET_ERROR) {
-		//	puts("øÕªß∂Àsend  ß∞‹");
-		//	system("pause");
-		//}
+
 		char receivebuf[256];
 		memset(receivebuf, 0, 256);
 		Ret = recv(client, receivebuf, 256, 0);

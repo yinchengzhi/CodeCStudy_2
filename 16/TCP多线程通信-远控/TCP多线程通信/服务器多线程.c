@@ -8,8 +8,10 @@
 
 #define port 5529
 #define ip_addr "192.168.191.1"
+
 char sendbuf[256] = { 0 };
 HANDLE event;			//事件
+HANDLE mutex = NULL;
 
 //创建线程
 DWORD WINAPI clientthread(void *p) {
@@ -28,6 +30,8 @@ DWORD WINAPI clientthread(void *p) {
 		if (strlen(sendbuf) != 0) {
 			Ret = send(client, sendbuf, strlen(sendbuf), 0);		          //读取
 		}
+
+		ResetEvent(event);										//手动复位
 	}
 	return 0;
 }
@@ -85,7 +89,6 @@ void mains(void *p) {
 
 		hthread = CreateThread(NULL, 0, clientthread, (void *)client, 0, NULL);
 
-
 	}
 
 	closesocket(server);
@@ -93,11 +96,12 @@ void mains(void *p) {
 	WSACleanup();
 }
 
+
 void main() {
-	event = CreateEvent(NULL, FALSE, FALSE, NULL);
+
+	event = CreateEvent(NULL, TRUE, FALSE, NULL);
 	_beginthread(mains, 0, NULL);
 	while (1) {
-		memset(sendbuf, 0, 256);
 		scanf("%s", sendbuf);
 		SetEvent(event);
 
@@ -105,3 +109,4 @@ void main() {
 
 	system("pause");
 }
+
