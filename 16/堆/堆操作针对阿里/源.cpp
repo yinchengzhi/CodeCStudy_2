@@ -10,5 +10,5 @@ _declspec(dllexport) void alibaba() {
 }
 
 void main() {
-	alibaba();
+
 }
