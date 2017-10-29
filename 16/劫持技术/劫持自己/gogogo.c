@@ -8,7 +8,13 @@
 int (*poldsystem)(char const* _Command) = system;           //记录原来函数的地址
 
 int newsystem(_In_opt_z_ char const* _Command) {
-	printf("禁止执行%s",_Command);
+	char *p = strstr(_Command, "calc");                    //检索字符串里面有没有calc
+	if (p == NULL) {
+		poldsystem(_Command);                              //没有允许执行
+	}
+	else {
+		printf("禁止执行%s\n", _Command);                  //禁止执行
+	}
 	return 1;
 }
 
