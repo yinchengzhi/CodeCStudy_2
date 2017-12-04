@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<Windows.h>
-#include"detours.h"                                         //加载头文件
+#include "detours.h"                                       //加载头文件
 
 #pragma comment(lib,"detours.lib")
 
-int (*poldsystem)(char const* _Command) = system;           //记录原来函数的地址
+int(*poldsystem)(char const* _Command) = system;           //记录原来函数的地址
 
 int newsystem(_In_opt_z_ char const* _Command) {
 	char *p = strstr(_Command, "calc");                    //检索字符串里面有没有calc
@@ -13,7 +13,8 @@ int newsystem(_In_opt_z_ char const* _Command) {
 		poldsystem(_Command);                              //没有允许执行
 	}
 	else {
-		printf("禁止执行%s\n", _Command);                  //禁止执行
+		//printf("禁止执行%s\n", _Command);                //禁止执行
+		MessageBoxA(0, "禁止执行calc", "禁止执行calc", 0);
 	}
 	return 1;
 }
@@ -27,14 +28,8 @@ void hook() {
 	DetourTransactionCommit();                             //生效
 }
 
-void main() {
+_declspec(dllexport) go() {
 
-	system("notepad");
-	hook();
+	hook();                                                //需要借助detours修改代码区
 
-	system("notepad");                                     //禁止system打开记事本怎么办
-	//需要借助detours修改代码区
-	system("calc");
-
-	getchar();
 }

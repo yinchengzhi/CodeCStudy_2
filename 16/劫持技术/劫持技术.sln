@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "劫持技术", "劫持技�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "劫持自己", "劫持自己\劫持自己.vcxproj", "{CFD355FD-CB12-4AAE-9FC2-8A42AB911CF0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "劫持其他人", "劫持其他人\劫持其他人.vcxproj", "{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{CFD355FD-CB12-4AAE-9FC2-8A42AB911CF0}.Release|x64.Build.0 = Release|x64
 		{CFD355FD-CB12-4AAE-9FC2-8A42AB911CF0}.Release|x86.ActiveCfg = Release|Win32
 		{CFD355FD-CB12-4AAE-9FC2-8A42AB911CF0}.Release|x86.Build.0 = Release|Win32
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Debug|x64.ActiveCfg = Debug|x64
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Debug|x64.Build.0 = Debug|x64
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Debug|x86.ActiveCfg = Debug|Win32
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Debug|x86.Build.0 = Debug|Win32
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Release|x64.ActiveCfg = Release|x64
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Release|x64.Build.0 = Release|x64
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Release|x86.ActiveCfg = Release|Win32
+		{1EF09BAB-CAE9-4AD5-A2EB-C049A3876EEE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
