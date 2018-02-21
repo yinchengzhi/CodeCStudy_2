@@ -9,7 +9,10 @@
 
 void write(void *p) {
 	while (1) {
-		SOCKET client = (SOCKET)p;
+		SOCKET client = (SOCKET)p;						//´«µÝ
+		char str[256] = { 0 };
+		scanf("%s", str);
+		send(client, str, strlen(str), 0);              //·¢ËÍ
 	}
 }
 
