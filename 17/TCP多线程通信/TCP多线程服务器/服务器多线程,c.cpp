@@ -77,9 +77,17 @@ void main(void *p) {
 		if (client == INVALID_SOCKET) {
 			puts("接收失败");
 			system("pause");
+			return;
 		}
-	}
+		printf("\n客户端连接%s  %d", inet_ntoa(clientaddr.sin_addr), clientaddr.sin_port);
+		hthread = CreateThread(NULL, 0, clientthread, (void*)client, 0, NULL);
 
+		//WaitForSingleObject(thread, INFINITE);
+
+	}
+	closesocket(server);
+	closesocket(client);
+	WSACleanup();
 }
 
 
